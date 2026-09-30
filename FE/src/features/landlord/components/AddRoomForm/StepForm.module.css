@@ -1,0 +1,288 @@
+/* ── StepForm ────────────────────────────────────────────────────── */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #c1440e;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionTitle::before {
+  content: '';
+  width: 4px;
+  height: 14px;
+  background: #c1440e;
+  border-radius: 4px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.row > * {
+  flex: 1;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #333;
+  text-align: left;
+}
+
+.required {
+  color: #ff4444;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #333;
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  background: #fff;
+  border-color: #c1440e;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+/* Footer buttons */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.backBtn:hover {
+  background: #f9f9f9;
+}
+
+.nextBtn,
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #c1440e;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.nextBtn:hover,
+.submitBtn:hover {
+  background: #e55a2b;
+}
+
+/* Checkboxes & Image upload */
+.checkboxGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #eee0d7;
+  border-radius: 10px;
+  background: #fffaf7;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.18s, background 0.18s;
+}
+
+.checkboxLabel:hover {
+  border-color: rgba(193, 68, 14, 0.35);
+  background: #fff4ee;
+}
+
+.checkboxLabel input {
+  accent-color: #c1440e;
+  width: 16px;
+  height: 16px;
+}
+
+.uploadBox {
+  border: 2px dashed #e0e0e0;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.uploadBox:hover {
+  border-color: #c1440e;
+  background: #fff5f0;
+}
+
+.uploadIcon {
+  color: #c1440e;
+}
+
+.uploadText {
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+}
+
+.uploadText span {
+  color: #c1440e;
+  font-weight: 600;
+}
+
+.fileInput {
+  display: none;
+}
+
+.previewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.previewItem {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ece7e2;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  background: #f8f8f8;
+}
+
+.previewItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.previewItem button {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.58);
+  cursor: pointer;
+}
+
+.errorText {
+  color: #b42318;
+  font-size: 12px;
+}
+
+.successText {
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.confirmBox {
+  display: grid;
+  gap: 10px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+  padding: 16px;
+  color: #2f2722;
+}
+
+.confirmBox p {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 12px;
+  margin: 0;
+  text-align: left;
+}
+
+.confirmBox strong {
+  color: #9a3412;
+}
+
+.confirmBox span {
+  word-break: break-word;
+}
+
+@media (max-width: 760px) {
+  .row,
+  .footer {
+    flex-direction: column;
+  }
+
+  .checkboxGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmBox p {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

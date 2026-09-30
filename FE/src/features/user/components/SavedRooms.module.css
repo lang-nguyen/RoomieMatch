@@ -1,0 +1,85 @@
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f3f4f6;
+  margin-bottom: 32px;
+}
+
+.searchInputWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f9fafb;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.searchIcon {
+  color: #9ca3af;
+  width: 20px;
+  height: 20px;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #1f2937;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.filterSelect {
+  padding: 10px 16px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;
+  outline: none;
+  cursor: pointer;
+  min-width: 120px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.roomsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

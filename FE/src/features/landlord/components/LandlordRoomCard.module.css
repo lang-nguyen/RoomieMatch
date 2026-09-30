@@ -1,0 +1,214 @@
+/* ── LandlordRoomCard ────────────────────────────────────────────── */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #eee8e4;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(32, 27, 24, 0.08);
+  transform: translateY(-2px);
+  border-color: rgba(193, 68, 14, 0.18);
+}
+
+/* Thumbnail */
+.thumbnail {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+}
+
+.thumbnailImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnailPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.codeBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0,0,0,0.35);
+  padding: 5px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(2px);
+}
+
+.statusBadgeWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Status badges — global classes (used by StatusBadge component) */
+:global(.status-badge) {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.03em;
+}
+
+:global(.status-badge--available) {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+:global(.status-badge--rented) {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+:global(.status-badge--negotiating) {
+  background: #fef9c3;
+  color: #713f12;
+}
+
+/* Info */
+.info {
+  padding: 14px 16px 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.35;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.address {
+  font-size: 12px;
+  color: #8a8f98;
+  margin: 0;
+  line-height: 1.45;
+  min-height: 34px;
+}
+
+/* Chips */
+.chipRows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #4b5563;
+  background: #f8f7f5;
+  border: 1px solid #f0ebe7;
+  padding: 5px 9px;
+  border-radius: 8px;
+}
+
+/* Price */
+.price {
+  font-size: 17px;
+  font-weight: 800;
+  color: #c1440e;
+  margin-top: 4px;
+}
+
+.priceUnit {
+  font-size: 12px;
+  font-weight: 500;
+  color: #98a2b3;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0 16px 16px;
+  margin-top: 6px;
+}
+
+.iconButton {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  border: 1px solid #ece7e2;
+  color: #625a55;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.iconButton:hover {
+  color: #c1440e;
+  border-color: rgba(193, 68, 14, 0.28);
+  background: rgba(193, 68, 14, 0.06);
+}
+
+.postButton {
+  margin-left: auto;
+  padding: 0 12px;
+  color: #fff;
+  background: #c1440e;
+  border-color: #c1440e;
+  box-shadow: 0 10px 18px rgba(193, 68, 14, 0.22);
+}
+
+.postButton:hover {
+  color: #fff;
+  background: #a93a0b;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(193, 68, 14, 0.26);
+}
+
+.dangerButton {
+  color: #c2410c;
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.dangerButton:hover {
+  color: #fff;
+  background: #ea580c;
+  border-color: #ea580c;
+}

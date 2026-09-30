@@ -1,0 +1,36 @@
+/* ── Shared page wrapper for all landlord pages ─────────────────── */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 100%;
+}
+
+/* Page heading block */
+.pageHeader {
+  margin-bottom: 20px;
+}
+
+.pageTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2px;
+}
+
+.pageSubtitle {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Breadcrumb row */
+.breadcrumb {
+  font-size: 11px;
+  color: #bbb;
+  margin-bottom: 4px;
+}
+
+.breadcrumb span + span::before {
+  content: ' › ';
+}

@@ -1,0 +1,87 @@
+.page {
+  display: grid;
+  gap: 18px;
+  text-align: left;
+  font-family: 'Be Vietnam Pro', 'Be Vietnam', 'Segoe UI', sans-serif;
+}
+
+.page button,
+.page input,
+.page select,
+.page textarea {
+  font-family: inherit;
+}
+
+.dashboard {
+  display: grid;
+  gap: 14px;
+}
+
+.dashboardHeader h1 {
+  margin: 0;
+  color: #1c1f2e;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.dashboardHeader p {
+  margin: 5px 0 0;
+  color: #5a6177;
+  font-size: 13px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 96px;
+  padding: 16px;
+  border: 1.5px solid #e8eaf2;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(28, 31, 46, 0.08);
+}
+
+.statIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: rgba(212, 91, 19, 0.1);
+  color: #d45b13;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statCard p {
+  margin: 0 0 6px;
+  color: #5a6177;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.statCard strong {
+  color: #1c1f2e;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

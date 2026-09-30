@@ -1,0 +1,229 @@
+.formWrapper {
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab:hover {
+  color: white;
+}
+
+.activeTab {
+  color: #d1561d;
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #d1561d;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background: white;
+  color: #333;
+  box-sizing: border-box;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px rgba(209, 86, 29, 0.5);
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 14px;
+  background-color: #c74a14;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.primaryButton:hover {
+  background-color: #a83d0f;
+}
+
+.forgotPassword {
+  display: block;
+  text-align: left;
+  color: #7bc1e8;
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgotPassword:hover {
+  color: #5aaad5;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 25px 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.divider::before {
+  margin-right: 15px;
+}
+
+.divider::after {
+  margin-left: 15px;
+}
+
+.googleButton {
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  color: #555;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.googleButton:hover {
+  background-color: #f0f0f0;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.radioGroup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 14px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.radioInput {
+  accent-color: #d1561d;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.errorMessage {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #f5c6cb;
+}
+
+.successMessage {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #c3e6cb;
+}
+
+/* Forgot Password specific */
+.headerTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: white;
+}
+
+.supportText {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+.supportText span {
+  color: #d1561d;
+  font-weight: 600;
+}

@@ -1,0 +1,50 @@
+/* ── LandlordLayout ──────────────────────────────────────────────── */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f8fc;
+  font-family: 'Be Vietnam Pro', 'Be Vietnam', 'Segoe UI', sans-serif;
+  align-items: flex-start;
+}
+
+.wrapper button,
+.wrapper input,
+.wrapper select,
+.wrapper textarea,
+.wrapper a {
+  font-family: inherit;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 32px 36px;
+  min-height: 100vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapperWide .main {
+  padding: 32px 36px;
+  background: #f7f8fc;
+}
+
+/* Responsive: ẩn right panel khi màn nhỏ */
+@media (max-width: 1200px) {
+  /* UserInfoPanel sẽ ẩn qua CSS Module của chính nó */
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .main,
+  .wrapperWide .main {
+    padding: 24px 18px;
+  }
+}

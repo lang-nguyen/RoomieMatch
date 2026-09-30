@@ -1,0 +1,873 @@
+/* Global overrides for homepage scope */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+.homepage {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #F5F5F5;
+  min-height: 100vh;
+}
+
+.homepage-content * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage-content a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.homepage-content button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.homepage-content ul {
+  list-style: none;
+}
+
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Removed overflow: hidden to allow dropdowns to show outside */
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 24px;
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+/* Search Filter Box */
+.search-filter-box {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  /* Ensure dropdowns are not cut off */
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.bottom-row {
+  margin-top: 16px;
+}
+
+.custom-dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-trigger {
+  width: 100%;
+  padding: 10px 42px 10px 14px;
+  border: 1.5px solid #E8EAF2;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #1C1F2E;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  height: 46px;
+  font-family: inherit;
+}
+
+.dropdown-trigger:hover {
+  border-color: rgba(212, 91, 19, 0.42);
+}
+
+.custom-dropdown-container.open .dropdown-trigger {
+  border-color: #D45B13;
+  box-shadow: 0 0 0 3px rgba(212, 91, 19, 0.1);
+}
+
+.dropdown-trigger.with-icon {
+  padding-left: 44px;
+}
+
+.dropdown-icon {
+  position: absolute;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.dropdown-value {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 14px;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+.custom-dropdown-container.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 8px;
+  background-color: white;
+  border: 1.5px solid #E8EAF2;
+  border-radius: 10px;
+  box-shadow: 0 18px 42px rgba(28, 31, 46, 0.14);
+  z-index: 1000;
+  /* High z-index to show over everything */
+  overflow: hidden;
+  /* This clips the options inside the rounded menu, which is fine */
+  text-align: left;
+  /* Override parent center alignment */
+}
+
+/* Limit dropdown height to ~5 items and enable scroll to avoid overflowing the viewport */
+.dropdown-menu {
+  max-height: 240px; /* ~5 items */
+  overflow-y: auto;
+}
+
+/* Optional: nicer thin scrollbar on modern browsers */
+.dropdown-menu::-webkit-scrollbar {
+  width: 8px;
+}
+.dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.12);
+  border-radius: 4px;
+}
+
+.dropdown-option {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #1C1F2E;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+  background-color: white;
+  text-align: left;
+  /* Explicitly left align */
+}
+
+.dropdown-menu.with-icon .dropdown-option {
+  padding-left: 44px;
+  /* Align with trigger text when icon is present */
+}
+
+.dropdown-option:hover {
+  box-shadow: none;
+  /* Bóng ngoài tạo nổi */
+  z-index: 1;
+  position: relative;
+  color: #D45B13;
+  background-color: rgba(212, 91, 19, 0.1);
+}
+
+.dropdown-option.selected {
+  font-weight: 600;
+  color: #D45B13;
+}
+
+.dropdown-option.placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.search-btn {
+  background-color: #D45B13;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.pill-btn {
+  border-radius: 9999px;
+  border: 1px solid white;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 180px;
+  height: 46px;
+  align-self: center;
+}
+
+.search-btn:hover {
+  background-color: #b54d10;
+}
+
+/* Main Content Area */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 24px;
+}
+
+.content-container {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.left-column {
+  flex: 3;
+  min-width: 0;
+}
+
+.right-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.view-all {
+  color: #D45B13;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+/* Room Card */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.rooms-state {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  color: #4B5563;
+}
+
+.rooms-loading {
+  font-size: 16px;
+}
+
+.rooms-error {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.retry-button {
+  background: #D45B13;
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 10px 20px;
+}
+
+.retry-button:hover {
+  background: #b54d10;
+}
+
+.room-card {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #E5E7EB;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: left;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.room-image-container {
+  position: relative;
+  height: 185px;
+}
+
+.room-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  pointer-events: none;
+}
+
+.badge-verified {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: white;
+  color: #D45B13;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B7280;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: color 0.2s;
+}
+
+.wishlist-icon:hover {
+  color: #D45B13;
+}
+
+.price-overlay {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: white;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-amount {
+  font-size: 24px;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.price-unit {
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.room-info {
+  padding: 16px;
+}
+
+.room-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.room-type-tag {
+  background: #F3F4F6;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
+}
+
+.time-ago {
+  color: #6B7280;
+  font-size: 13px;
+}
+
+.room-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  height: 44px;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-align: left;
+}
+
+.room-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: #6B7280;
+  font-size: 13px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.room-location svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.room-divider {
+  height: 1px;
+  background: #E5E7EB;
+  margin: 12px 0;
+}
+
+.room-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #E5E7EB;
+  padding: 5px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #4B5563;
+}
+
+@media (max-width: 992px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rooms-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .right-column {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* City Cards */
+.cities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.city-card {
+  position: relative;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.city-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.city-card:hover .city-image {
+  transform: scale(1.08);
+}
+
+.city-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 60px 24px 24px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+}
+
+.city-card-name {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.city-card-count {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wavy-line {
+  flex: 1;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='12' viewBox='0 0 100 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6 Q12.5 0 25 6 T50 6 T75 6 T100 6' stroke='%23D45B13' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+  opacity: 0.4;
+}
+
+.faq-title-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+.faq-icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #D45B13;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(212, 91, 19, 0.3);
+}
+
+.faq-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: white;
+  border: 1px solid #F3F4F6;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  border-color: #E5E7EB;
+}
+
+.faq-question-row {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.faq-q-icon {
+  width: 28px;
+  height: 28px;
+  background: #FFF7F2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.faq-question {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1F2937;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.faq-arrow {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 20px 12px 64px;
+  color: #4B5563;
+  font-size: 13px;
+  line-height: 1.6;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.map-promo {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-map-btn {
+  background: white;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.view-map-btn:hover {
+  background: #D45B13;
+  color: white;
+}
+
+.feature-highlight {
+  background: #D45B13;
+  border-radius: 12px;
+  padding: 24px;
+  color: white;
+}
+
+.highlight-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upgrade-btn {
+  width: 100%;
+  background: white;
+  color: #D45B13;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.upgrade-btn:hover {
+  background: #f0f0f0;
+}
+
+@media (max-width: 992px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rooms-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .right-column {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cities-grid {
+    grid-template-columns: 1fr;
+  }
+}

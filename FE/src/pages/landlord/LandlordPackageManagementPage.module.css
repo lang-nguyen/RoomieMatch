@@ -1,0 +1,133 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100%;
+  text-align: left;
+  color: #2a2522;
+}
+
+.section {
+  border: 1px solid #eee8e4;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(32, 27, 24, 0.04);
+  overflow: hidden;
+}
+
+.section h2 {
+  margin: 0;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eee8e4;
+  color: #1f1b18;
+  font-size: 18px;
+  font-weight: 800;
+  background: #fff;
+}
+
+.tableWrap {
+  background: #fff;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tableWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.tableWrap table {
+  width: 100%;
+  min-width: 740px;
+  border-collapse: collapse;
+}
+
+.tableWrap th,
+.tableWrap td {
+  border-bottom: 1px solid #f1ebe7;
+  padding: 18px 24px;
+  color: #67615c;
+  font-size: 14px;
+  text-align: left;
+}
+
+.tableWrap th {
+  color: #aaa39d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #faf6f2;
+}
+
+.packageName,
+.date {
+  color: #1f1b18 !important;
+  font-size: 15px !important;
+  font-weight: 800;
+}
+
+.detailLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: #fff4ee;
+  color: #c1440e;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.detailLink:hover {
+  background: #fde8dd;
+  color: #a83808;
+}
+
+.empty {
+  padding: 60px 24px !important;
+  text-align: center !important;
+  color: #9a928c !important;
+  font-size: 14px;
+}
+
+/* Status Badges */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.statusDefault {
+  background: #f8f3ef;
+  color: #7b7069;
+}
+
+.statusActive {
+  background: #eaf8ef;
+  color: #237b52;
+}
+
+.statusPending {
+  background: #fff3e9;
+  color: #c26a1a;
+}
+
+.statusFailed {
+  background: #fff0f2;
+  color: #cf4259;
+}
+
+.statusPaid {
+  background: #eef5ff;
+  color: #3b74db;
+}

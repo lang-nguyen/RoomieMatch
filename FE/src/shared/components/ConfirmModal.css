@@ -1,0 +1,183 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-container {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  padding: 24px;
+  border: 1px solid #f0e2da;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: relative;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Be Vietnam Pro', 'Be Vietnam', 'Segoe UI', sans-serif;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 4px;
+  display: flex;
+  border-radius: 50%;
+}
+
+.modal-close-btn:hover {
+  color: #4b5563;
+  background-color: #f3f4f6;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.modal-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-icon.confirm {
+  background-color: #fff4ee;
+  color: #c1440e;
+}
+
+.modal-icon.alert {
+  background-color: #fff7ed;
+  color: #B53F10; /* Orange for chatbot alert */
+}
+
+.modal-icon.success {
+  background-color: #f0fdf4;
+  color: #16a34a; /* Green for success */
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-body {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.modal-body p {
+  margin: 0;
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.modal-btn-cancel {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.modal-btn-cancel:hover {
+  background-color: #f9fafb;
+}
+
+.modal-btn-confirm {
+  background-color: #c1440e;
+  color: white;
+}
+
+.modal-btn-confirm:hover {
+  background-color: #a93a0b;
+  box-shadow: 0 4px 12px rgba(193, 68, 14, 0.24);
+}
+
+.modal-icon.alert ~ .modal-title {
+  color: #B53F10;
+}
+
+.modal-icon.success ~ .modal-title {
+  color: #16a34a;
+}
+
+/* For alert type, change confirm button to primary theme */
+.modal-btn-full {
+  background-color: #B53F10;
+}
+
+.modal-btn-full:hover {
+  background-color: #98330c;
+  box-shadow: 0 4px 12px rgba(181, 63, 16, 0.3);
+}
+
+.modal-icon.success ~ .modal-footer .modal-btn-full {
+  background-color: #16a34a;
+}
+
+.modal-icon.success ~ .modal-footer .modal-btn-full:hover {
+  background-color: #15803d;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

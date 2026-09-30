@@ -1,0 +1,146 @@
+.card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f3f4f6;
+  padding: 16px;
+  gap: 20px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.imageWrapper {
+  width: 240px;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+    text-align: left;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  row-gap: 8px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 6px;
+}
+
+.address {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.statusTag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  width: fit-content;
+  margin-top: auto;
+}
+
+.statusAvailable {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.statusRented {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 130px;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btnIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.btnPrimary {
+  background-color: #ea580c;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background-color: #c2410c;
+}
+
+.btnSecondary {
+  background-color: #ffffff;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+.btnSecondary:hover {
+  background-color: #f9fafb;
+}
+
+.btnDanger {
+  background-color: #ffffff;
+  border-color: #fca5a5;
+  color: #ef4444;
+}
+
+.btnDanger:hover {
+  background-color: #fef2f2;
+}

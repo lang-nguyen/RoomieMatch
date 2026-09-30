@@ -1,0 +1,50 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #333;
+  font-size: 13px;
+}
+
+.meta strong {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+.track {
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f3f0ed;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.green {
+  background: #3f7b1b;
+}
+
+.orange {
+  background: #c77a12;
+}
+
+.blue {
+  background: #1f66ae;
+}
+
+.red {
+  background: #df5a32;
+}

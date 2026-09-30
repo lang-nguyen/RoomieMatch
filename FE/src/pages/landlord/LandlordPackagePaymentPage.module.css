@@ -1,0 +1,308 @@
+.page,
+.loading {
+  min-height: 100%;
+  text-align: left;
+  color: #181512;
+}
+
+.loading {
+  padding: 24px;
+  color: #8a837e;
+}
+
+.loading a {
+  color: #c1440e;
+  font-weight: 800;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: -4px 0 22px;
+  color: #4b4540;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #3a342f;
+  text-decoration: none;
+}
+
+.checkoutStack {
+  display: grid;
+  gap: 22px;
+  max-width: 820px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.summaryCard,
+.paymentCard {
+  border: 1px solid #eee8e4;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(32, 27, 24, 0.08);
+}
+
+.summaryCard {
+  padding: 24px 26px 22px;
+}
+
+.paymentCard {
+  padding: 24px 26px 24px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  color: #14100d;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.cardHeader p {
+  margin: 6px 0 0;
+  color: #7a736e;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.planBadge {
+  border-radius: 999px;
+  background: #fff2e8;
+  color: #c1440e;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.packageSummary {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #e6f4ff, #d4efff);
+  padding: 22px 24px;
+  margin: 4px 0 20px;
+}
+
+.packageSummary span {
+  display: block;
+  color: #1642b9;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.packageSummary strong {
+  display: block;
+  margin-top: 10px;
+  color: #5d6cff;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.packageSummary em {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  border-radius: 999px;
+  background: #6675ff;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.summaryBody {
+  display: grid;
+  gap: 18px;
+}
+
+.benefitsBlock h3 {
+  margin: 0 0 14px;
+  color: #111;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.benefitsBlock ul {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.benefitsBlock li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #625b56;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.benefitsBlock li svg {
+  color: #188038;
+  flex: 0 0 auto;
+}
+
+.totalRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #f1e7e1;
+  color: #191512;
+}
+
+.totalRow strong {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.totalRow span {
+  font-size: 20px;
+  font-weight: 900;
+  color: #c1440e;
+}
+
+.methodList {
+  display: grid;
+  gap: 10px;
+  margin: 2px 0 16px;
+}
+
+.methodItem {
+  width: 100%;
+  min-height: 56px;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #d7d0ca;
+  border-radius: 12px;
+  background: #fff;
+  color: #2f2924;
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.methodActive {
+  border: 1.5px solid #c1440e;
+  background: #fbf0e7;
+}
+
+.methodItem strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.methodItem small {
+  display: block;
+  margin-top: 3px;
+  color: #6f6862;
+  font-size: 11px;
+}
+
+.cardNotice {
+  border: 1px dashed #e5c4b4;
+  border-radius: 12px;
+  background: #fff8f3;
+  color: #6c5143;
+  padding: 14px;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+.paymentFooter {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.inlineTotal {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #f9fafb;
+  border: 1px solid #ece7e2;
+}
+
+.inlineTotal span {
+  color: #615b55;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.inlineTotal strong {
+  color: #c1440e;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 48px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #cf560f, #b94709);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(193, 68, 14, 0.22);
+}
+
+.submitBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@media (max-width: 720px) {
+  .summaryCard,
+  .paymentCard {
+    padding: 20px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .packageSummary span {
+    font-size: 20px;
+  }
+
+  .packageSummary strong {
+    font-size: 24px;
+  }
+
+  .packageSummary em {
+    position: static;
+    display: inline-flex;
+    margin-top: 12px;
+  }
+
+  .inlineTotal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

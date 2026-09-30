@@ -1,0 +1,141 @@
+.lineChart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 260px;
+}
+
+.lineChart svg {
+  width: 100%;
+  height: 230px;
+  overflow: visible;
+}
+
+.gridLine {
+  stroke: #ebe6e2;
+  stroke-width: 1;
+}
+
+.area {
+  fill: rgba(229, 90, 43, 0.09);
+}
+
+.viewsLine {
+  fill: none;
+  stroke: #ef4b12;
+  stroke-width: 3;
+}
+
+.contactsLine {
+  fill: none;
+  stroke: #d9562e;
+  stroke-width: 3;
+  stroke-dasharray: 8 6;
+}
+
+.viewsDot,
+.contactsDot {
+  fill: #ef4b12;
+  stroke: #fff;
+  stroke-width: 3;
+}
+
+.contactsDot {
+  fill: #d9562e;
+}
+
+.axis {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #9b9692;
+  font-size: 12px;
+}
+
+.axis span {
+  text-align: center;
+}
+
+.donutWrap {
+  width: min(270px, 100%);
+  aspect-ratio: 1;
+  margin: 18px auto 0;
+  position: relative;
+}
+
+.donut {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.donut circle {
+  transition: stroke-dasharray 0.2s ease;
+}
+
+.donutCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #25201d;
+}
+
+.donutCenter strong {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.donutCenter span {
+  color: #a09a96;
+  font-size: 12px;
+}
+
+.barChart {
+  height: 260px;
+  display: grid;
+  grid-template-columns: repeat(var(--bar-columns, 1), minmax(0, 1fr));
+  align-items: end;
+  gap: var(--bar-gap, 24px);
+  border-top: 1px solid #eee8e4;
+  padding: 12px clamp(12px, 3vw, 28px) 0;
+  background-image: linear-gradient(to bottom, transparent calc(20% - 1px), #eee8e4 20%, transparent calc(20% + 1px), transparent);
+  background-size: 100% 44px;
+}
+
+.barCol {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 12px;
+  min-width: 0;
+}
+
+.barTrack {
+  display: flex;
+  align-items: end;
+  min-height: 0;
+}
+
+.barTrack span {
+  width: 100%;
+  border: 2px solid #ff6533;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background: #f8d7c8;
+}
+
+.barLabel {
+  color: #aaa29d;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .barChart {
+    gap: var(--bar-gap-mobile, 10px);
+    padding-inline: 10px;
+  }
+}

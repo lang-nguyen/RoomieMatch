@@ -1,0 +1,37 @@
+from __future__ import annotations
+
+from datetime import date, datetime
+
+from sqlalchemy import Date, DateTime, Enum, ForeignKey, Integer, String, Text, func
+from sqlalchemy.orm import Mapped, mapped_column
+
+from app.database.base import Base
+
+
+class Profile(Base):
+    __tablename__ = "profiles"
+
+    account_id: Mapped[int] = mapped_column(
+        Integer,
+        ForeignKey("accounts.id", name="fk_profiles_account"),
+        primary_key=True,
+    )
+    full_name: Mapped[str] = mapped_column(String(100), nullable=False)
+    phone: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    gender: Mapped[str | None] = mapped_column(
+        Enum("male", "female", "other", name="gender_enum"),
+        nullable=True,
+    )
+    avatar_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    facebook: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    instagram: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    twitter: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    bio: Mapped[str | None] = mapped_column(Text, nullable=True)
+    date_of_birth: Mapped[date | None] = mapped_column(Date, nullable=True)
+    address: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    hometown: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False,
+    )

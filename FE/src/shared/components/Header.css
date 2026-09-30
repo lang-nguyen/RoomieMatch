@@ -1,0 +1,390 @@
+.header {
+  background-color: #B53F10;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px; /* ensure horizontal spacing on all pages */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  --item-width: 112px;
+
+  display: flex;
+  height: 100%;
+  position: relative;
+  align-items: stretch;
+}
+
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: var(--item-width);
+  height: 48px;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+  pointer-events: none;
+
+  transform: translateX(calc(var(--selected-index) * var(--item-width)));
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.indicator-curve-left,
+.indicator-curve-right {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.indicator-curve-left {
+  left: -20px;
+  background: radial-gradient(circle at 0 0, transparent 19.5px, white 20px);
+}
+
+.indicator-curve-right {
+  right: -20px;
+  background: radial-gradient(circle at 100% 0, transparent 19.5px, white 20px);
+}
+
+.nav-link {
+  position: relative;
+  width: var(--item-width);
+  height: 100%;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+
+  z-index: 2;
+  transition: color 0.08s linear;
+}
+
+.nav-link:visited {
+  color: white;
+}
+
+.nav-link.selected,
+.nav-link.selected:visited {
+  color: #B53F10;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.login-link {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.login-link:visited {
+  color: white;
+}
+
+.icon-btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.user-icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+/* User Profile Dropdown Styles */
+.user-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.user-profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s, transform 0.2s;
+  user-select: none;
+}
+
+.user-profile-trigger:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.user-avatar-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+}
+
+.user-name-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-arrow-icon {
+  transition: transform 0.2s ease;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-arrow-icon.open {
+  transform: rotate(180deg);
+}
+
+.user-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 240px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  z-index: 1000;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-user-info {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.dropdown-user-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2px 0;
+}
+
+.dropdown-user-email {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  word-break: break-all;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 6px 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4a4a;
+  text-decoration: none;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.dropdown-item svg {
+  color: #7a7a7a;
+  transition: color 0.15s;
+}
+
+.dropdown-item:hover {
+  background-color: #fff3ed;
+  color: #B53F10;
+}
+
+.dropdown-item:hover svg {
+  color: #B53F10;
+}
+
+.dropdown-item.logout-btn {
+  color: #dc2626;
+}
+
+.dropdown-item.logout-btn svg {
+  color: #dc2626;
+}
+
+.dropdown-item.logout-btn:hover {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.dropdown-item.logout-btn:hover svg {
+  color: #dc2626;
+}
+
+.logout-confirm-anchor {
+  position: relative;
+}
+
+.logout-confirm-popover {
+  position: absolute;
+  right: 10px;
+  bottom: 2px;
+  width: 268px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid rgba(181, 63, 16, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 18px 42px rgba(47, 42, 36, 0.2);
+  z-index: 1010;
+  animation: logoutConfirmIn 0.16s ease both;
+}
+
+.logout-confirm-popover::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  bottom: -6px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-right: 1px solid rgba(181, 63, 16, 0.18);
+  border-bottom: 1px solid rgba(181, 63, 16, 0.18);
+  transform: rotate(45deg);
+}
+
+.logout-confirm-title {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2f2a24;
+}
+
+.logout-confirm-text {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #7b6f62;
+}
+
+.logout-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.logout-confirm-cancel,
+.logout-confirm-submit {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logout-confirm-cancel {
+  background: #f8f3ec;
+  color: #7b6f62;
+}
+
+.logout-confirm-submit {
+  background: #B53F10;
+  color: #fff;
+}
+
+.logout-confirm-cancel:hover {
+  background: #f0e4d8;
+}
+
+.logout-confirm-submit:hover {
+  background: #9e3e18;
+}
+
+@keyframes logoutConfirmIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

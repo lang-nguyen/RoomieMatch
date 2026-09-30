@@ -1,0 +1,184 @@
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 30px;
+  padding-left: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.menuItem:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.menuItem.active {
+  background-color: #eff6ff;
+  color: #ea580c; /* Orange based on the design */
+}
+
+.menuItem.active .icon {
+  color: #ea580c;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  color: #6b7280;
+}
+
+.footerMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #ef4444; /* Red color for logout */
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.logoutBtn:hover {
+  background-color: #fef2f2;
+}
+
+.logoutIcon {
+  width: 18px;
+  height: 18px;
+  color: #ef4444;
+}
+
+.logoutConfirmAnchor {
+  position: relative;
+}
+
+.logoutConfirmPopover {
+  position: absolute;
+  left: 10px;
+  bottom: calc(100% + 6px);
+  width: 238px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid rgba(181, 63, 16, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 18px 42px rgba(47, 42, 36, 0.2);
+  z-index: 8;
+  animation: logoutConfirmIn 0.16s ease both;
+}
+
+.logoutConfirmPopover::after {
+  content: '';
+  position: absolute;
+  left: 22px;
+  bottom: -6px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-right: 1px solid rgba(181, 63, 16, 0.18);
+  border-bottom: 1px solid rgba(181, 63, 16, 0.18);
+  transform: rotate(45deg);
+}
+
+.logoutConfirmTitle {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2f2a24;
+}
+
+.logoutConfirmText {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #7b6f62;
+}
+
+.logoutConfirmActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.logoutConfirmCancel,
+.logoutConfirmSubmit {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logoutConfirmCancel {
+  background: #f8f3ec;
+  color: #7b6f62;
+}
+
+.logoutConfirmSubmit {
+  background: #B53F10;
+  color: #fff;
+}
+
+.logoutConfirmCancel:hover {
+  background: #f0e4d8;
+}
+
+.logoutConfirmSubmit:hover {
+  background: #9e3e18;
+}
+
+@keyframes logoutConfirmIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,261 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.backBtn:hover {
+  background-color: #f0f0f0;
+}
+
+.backIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.searchBar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.searchInputWrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  color: #666;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f8f9fa;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #f26622;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(242, 102, 34, 0.1);
+}
+
+.filterSelect {
+  padding: 12px 40px 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+  background-size: 10px auto;
+}
+
+.filterSelect:focus {
+  border-color: #f26622;
+}
+
+.packagesList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px 16px;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s;
+}
+
+.card:hover {
+  background-color: #fcfcfc;
+}
+
+.card:last-child {
+  border-bottom: none;
+}
+
+.packageInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 250px;
+}
+
+.iconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.iconVip {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  box-shadow: 0 4px 12px rgba(234,88,12,0.3);
+}
+
+.iconBasic {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  box-shadow: 0 4px 12px rgba(79,70,229,0.3);
+}
+
+.iconFree {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+}
+
+.namePrice {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4F46E5;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.dates {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dateRow {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.dateLabel {
+  color: #666;
+  width: 100px;
+}
+
+.dateValue {
+  color: #333;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  width: 140px;
+}
+
+.statusTag {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 130px;
+}
+
+.statusActive {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.statusPending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.statusExpired {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.btnIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.btnSecondary {
+  background-color: white;
+  border-color: #e0e0e0;
+  color: #333;
+}
+
+.btnSecondary:hover {
+  background-color: #f8f9fa;
+  border-color: #d0d0d0;
+}
