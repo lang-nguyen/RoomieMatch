@@ -1,6 +1,6 @@
 # RommieMatch
 
-**🚀 Live Demo:** [https://roomiematch-omega.vercel.app](https://roomiematch-omega.vercel.app)
+**Live Demo:** [https://roomiematch-kmrsq1oo0-nguyen-thi-langs-projects.vercel.app/](https://roomiematch-kmrsq1oo0-nguyen-thi-langs-projects.vercel.app/)
 
 A full-stack web platform for finding rental rooms and compatible roommates in Vietnam.
 
