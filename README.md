@@ -4,6 +4,8 @@
 
 A full-stack web platform for finding rental rooms and compatible roommates in Vietnam.
 
+<img width="1917" height="906" alt="image" src="https://github.com/user-attachments/assets/8ea75499-6e62-4f32-ad48-f8b1c9feb383" />
+
 ## Features
 
 - **Room listing & search** — filter by city, district, price, and amenities
