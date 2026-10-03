@@ -95,25 +95,25 @@ export const citiesData = [
 export const faqData = [
   {
     id: 1,
-    question: "SmartRoom có đảm bảo phòng trọ là thông tin thật không?",
-    answer: "SmartRoom cam kết 100% thông tin phòng trọ được xác thực và cập nhật theo thời gian thực.",
+    question: "RoomieMatch có đảm bảo phòng trọ là thông tin thật không?",
+    answer: "RoomieMatch cam kết 100% thông tin phòng trọ được xác thực và cập nhật theo thời gian thực.",
     icon: "verified"
   },
   {
     id: 2,
     question: "Tôi có được hỗ trợ dẫn đi xem phòng không?",
-    answer: "Đội ngũ SmartRoom sẵn sàng hỗ trợ dẫn bạn đi xem phòng miễn phí bất cứ lúc nào.",
+    answer: "Đội ngũ RoomieMatch sẵn sàng hỗ trợ dẫn bạn đi xem phòng miễn phí bất cứ lúc nào.",
     icon: "help"
   },
   {
     id: 3,
-    question: "SmartRoom phù hợp với những ai?",
+    question: "RoomieMatch phù hợp với những ai?",
     answer: "Dành cho sinh viên, người đi làm và bất kỳ ai đang tìm kiếm không gian sống chất lượng.",
     icon: "users"
   },
   {
     id: 4,
-    question: "Ngoài tìm phòng, SmartRoom còn hỗ trợ dịch vụ gì khác?",
+    question: "Ngoài tìm phòng, RoomieMatch còn hỗ trợ dịch vụ gì khác?",
     answer: "Chúng tôi hỗ trợ chuyển nhà, đăng ký tạm trú và các dịch vụ tiện ích đi kèm.",
     icon: "chat"
   }

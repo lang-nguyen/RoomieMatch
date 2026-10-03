@@ -177,7 +177,7 @@ const Homepage = () => {
 
           <div className="hero-content">
             <h1 className="hero-title">Tìm Phòng Trọ Ưng Ý Nhanh Chóng & Dễ Dàng</h1>
-            <p className="hero-subtitle">SmartRoom kết nối người thuê với phòng đang trống theo thời<br />gian thực - không tin ảo - minh bạch chi phí</p>
+            <p className="hero-subtitle">RoomieMatch kết nối người thuê với phòng đang trống theo thời<br />gian thực - không tin ảo - minh bạch chi phí</p>
 
             <div className="home-search-wrapper" style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
               <RoomSearch
@@ -256,7 +256,7 @@ const Homepage = () => {
                     <div className="faq-icon-circle">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
                     </div>
-                    <h2 className="faq-title">Câu hỏi thường gặp về SmartRoom</h2>
+                    <h2 className="faq-title">Câu hỏi thường gặp về RoomieMatch</h2>
                   </div>
                   <div className="wavy-line right"></div>
                 </div>

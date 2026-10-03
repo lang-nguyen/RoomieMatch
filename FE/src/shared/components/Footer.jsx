@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-col">
-          <h2 className="footer-logo">SmartRoom</h2>
+          <h2 className="footer-logo">RoomieMatch</h2>
           <p className="footer-desc">Nền tảng tìm kiếm phòng trọ và người ở ghép số 1 Việt Nam, giúp bạn tìm được không gian sống lý tưởng.</p>
         </div>
 
@@ -13,7 +13,7 @@ const Footer = () => {
           <h3 className="footer-title">Liên hệ</h3>
           <ul className="footer-links">
             <li><strong>Hotline:</strong> 1900 1224</li>
-            <li><strong>Email:</strong> support@smartroom.com</li>
+            <li><strong>Email:</strong> support@roomiematch.com</li>
             <li><strong>Địa chỉ:</strong> 16 Quốc lộ 1A, P. Linh Trung, TP. Thủ Đức, TP.HCM</li>
           </ul>
         </div>
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 SmartRoom. All rights reserved.</p>
+        <p>&copy; 2024 RoomieMatch. All rights reserved.</p>
       </div>
     </footer>
   );
